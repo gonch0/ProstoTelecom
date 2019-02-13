@@ -1,63 +1,119 @@
 <!DOCTYPE html>
 
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>Prosto telecom</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-  </head>
-  <body>
-    <header class="page-header">
-      <div class="page-header__logo">
-        <img src="http://placehold.it/150x100" width='150' height='100' alt="Простотелеком логотип"></img>
-      </div>
-      <nav class="main-nav main-nav--closed">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Закрыть меню</span></button>
-        <button class="main-nav__button" type="button"><span>Для дома</span></button>
-        <button class="main-nav__button" type="button"><span>Для бизнеса</span></button>
-
-        <ul class="main-nav__list site-list">Продукты и услуги
-          <li class="site-list__item">Интернет</li>
-          <li class="site-list__item">Телефония</li>
-          <li class="site-list__item">Каналы передачи данных</li>
-          <button class="main-nav__button" type="button"><span class="visually-hidden">Закрыть "Продукты и услуги"</span></button>
-        </ul>
-
-        <ul class="main-nav__list site-list">Решения
-          <li class="site-list__item">1</li>
-          <button class="main-nav__button" type="button"><span class="visually-hidden">Закрыть "Решения"</span></button>
-        </ul>
-
-        <ul class="main-nav__list site-list">Облачные сервисы
-          <li class="site-list__item">1</li>
-          <button class="main-nav__button" type="button"><span class="visually-hidden">Закрыть "Облачные сервисы"</span></button>
-        </ul>
+<head>
+  <meta charset="utf-8">
+  <title>Prosto telecom</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
 
 
-        <ul class="main-nav__list user-list">
-          <li class="user-list__item">
-            <a class="user-list__login" href="#">Личный кабинет</a>
+<header class="page-header">
+  <nav class="main-nav main-nav--closed main-nav--nojs ">
+    <div class="page-header__logo-wrapper">
+      <a class="page-header__logo" href="#">
+        <img src="../img/logo.png" width='198' height='47' alt="Простотелеком логотип">
+      </a>
+
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Меню</span></button>
+    </div>
+
+    <div class="main-nav__sidebar">
+
+      <ul class="main-nav__list main-menu main-nav__bottomline">
+        <div class="main-menu__wrapper">
+          <li class="main-menu__item">
+            <div class="main-nav__headline">
+              <h2><a href="#">Продукты и услуги</a></h2>
+              <button class="site-list__expand expand--active" type="button"><span class="visually-hidden">Развернуть/свернуть списки</span></button>
+            </div>
+
+            <ul class="main-nav__list site-list">
+              <li class="site-list__item"><a href="#">Интернет</a></li>
+              <li class="site-list__item"><a href="#">Телефония</a></li>
+              <li class="site-list__item"><a href="#">Каналы передачи данных</a></li>
+            </ul>
           </li>
-          <li class="user-list__item">
-            <a class="user-list__phone" href="#">Позвонить</a>
-          </li>
-          <li class="user-list__item">
-            <a class="user-list__search" href="#">Поиск</a>
-          </li>
-        </ul>
 
-        <div class='main-nav__contacts'>
-          <b>Санкт-Петербург</b>
-          <a class="contacts__phone" href="tel:+78123664040">
-            <span class="contacts__phone-mobile">Тел.:</span>
-            +7 (812) 366 40 40
-          </a>
+          <li class="main-menu__item">
+            <div class="main-nav__headline">
+              <h2><a href="#">Решения</a></h2>
+              <button class="site-list__expand" type="button"><span class="visually-hidden">Развернуть/свернуть списки</span></button>
+            </div>
+
+            <ul class="main-nav__list site-list">
+              <li class="site-list__item"><a href="#">Решения-1</a></li>
+              <li class="site-list__item"><a href="#">Решения-2</a></li>
+              <li class="site-list__item"><a href="#">Решения-3</a></li>
+            </ul>
+          </li>
+
+          <li class="main-menu__item">
+            <div class="main-nav__headline">
+              <h2><a href="#">Облачные сервисы</a></h2>
+              <button class="site-list__expand" type="button"><span class="visually-hidden">Развернуть/свернуть списки</span></button>
+            </div>
+
+            <ul class="main-nav__list site-list">
+              <li class="site-list__item"><a href="#">Сервисы-1</a></li>
+              <li class="site-list__item"><a href="#">Сервисы-2</a></li>
+              <li class="site-list__item"><a href="#">Сервисы-3</a></li>
+            </ul>
+          </li>
         </div>
+      </ul>
 
-      </nav>
-    </header>
+      <div class="main-nav__topline">
 
-    <main class="page-main">
+        <div class="main-nav__wrapper">
+
+          <ul class="main-nav__options main-nav__list options-list">
+            <li class="options__item "><a href="#">Для дома</a></li>
+            <li class="options__item options__item--current"><a>Для бизнеса</a></li>
+          </ul>
+
+
+
+          <ul class="main-nav__about about">
+            <li class="about__item"><a href="#">О компании</a></li>
+            <li class="about__item"><a href="#">Новости</a></li>
+            <li class="about__item"><a href="#">Вакансии</a></li>
+            <li class="about__item"><a href="#">Контакты</a></li>
+          </ul>
+
+          <ul class="main-nav__list user-list">
+            <li class="user-list__item">
+              <a class="user-list__login" href="#">
+                <img src="http://placehold.it/30x30" width="30" height="30" alt="Личный кабинет">
+              </a>
+            </li>
+            <li class="user-list__item">
+              <a class="user-list__phone" href="#">
+                <img src="http://placehold.it/30x30" width="30" height="30" alt="Позвонить">
+              </a>
+            </li>
+            <li class="user-list__item">
+              <a class="user-list__search" href="#">
+                <img src="http://placehold.it/30x30" width="30" height="30" alt="Поиск">
+              </a>
+            </li>
+          </ul>
+          <p class='main-nav__contacts'>
+            <b>Санкт-Петербург</b>
+            <br>
+            <a class="contacts__phone" href="tel:+78123664040">
+              +7 (812) 366 40 40
+            </a>
+          </p>
+      </div>
+    </div>
+
+  </nav>
+
+</header>
+
+    <!-- <main class="page-main">
       <section class="business">
         <ul class="business__list slider__list">
           <li class="business__item slider__item">
@@ -141,31 +197,58 @@
         </ul>
         <a class="news__link link" href="#">Ещё новости</a>
       </section>
-    </main>
-
-  </body>
+    </main> -->
 
 
-  <!--Формы-->
-  <section class="account">
-    <h2 class="account__title">Личный кабинет</h2>
-    <section>
-      <div class="account__radio">
-        <input class="account__input" type="radio" name="reg" id="reg">
-        <label class="account__label" for="reg">Регистрация</label>
-      </div>
-      <div class="account__radio">
-        <input class="account__input" type="radio" name="auth" id="auth">
-        <label class="account__label" for="auth">Авторизация</label>
-      </div>
-    </section>
-    <form class="account__form" action="" method="post">
-      <header class="review__header">
-        <h2>Оставьте свой отзыв</h2>
-      </header>
-      <input class="account__name"></input>
-    </form>
+<!--   </div>-->
+
+
+  <script>
+    var navSidebar = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
+
+    navSidebar.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navSidebar.classList.contains('main-nav--closed')) {
+        navSidebar.classList.remove('main-nav--closed');
+        navSidebar.classList.add('main-nav--opened');
+      } else {
+        navSidebar.classList.add('main-nav--closed');
+        navSidebar.classList.remove('main-nav--opened');
+      }
+    });
+
+
+
+
+  </script>
+
+
+
+</body>
+
+
+<!--Формы
+<section class="account">
+  <h2 class="account__title">Личный кабинет</h2>
+  <section>
+    <div class="account__radio">
+      <input class="account__input" type="radio" name="login" id="reg">
+      <label class="account__label" for="reg">Регистрация</label>
+    </div>
+    <div class="account__radio">
+      <input class="account__input" type="radio" name="login" id="auth">
+      <label class="account__label" for="auth">Авторизация</label>
+    </div>
   </section>
+  <form class="account__form" action="" method="post">
+    <header class="review__header">
+      <h2>Оставьте свой отзыв</h2>
+    </header>
+    <input class="account__name"></input>
+  </form>
+</section>-->
 
 
 </html>
