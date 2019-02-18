@@ -4,177 +4,156 @@
 <head>
   <meta charset="utf-8">
   <title>Prosto telecom</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
+<header class="page-header page-header--closed page-header--nojs">
+  <div class="page-header__logo-wrapper">
+    <a class="page-header__logo">
+      <img src="img/logo.png" width='198' height='47' alt="Простотелеком логотип">
+    </a>
 
-<header class="page-header">
-  <nav class="main-nav main-nav--closed main-nav--nojs ">
-    <div class="page-header__logo-wrapper">
-      <a class="page-header__logo" href="#">
-        <img src="../img/logo.png" width='198' height='47' alt="Простотелеком логотип">
-      </a>
+    <button class="page-header__toggle" type="button"><span class="visually-hidden">Меню</span></button>
+  </div>
 
-      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Меню</span></button>
-    </div>
+  <nav class="page-header__main-nav main-nav">
 
-    <div class="main-nav__sidebar">
+    <div class="main-nav__topline topline">
+      <div class="topline__wrapper">
+        <ul class="topline__options options">
+          <li class="options__item"><a href="#">Для дома</a></li>
+          <li class="options__item options__item--current"><a>Для бизнеса</a></li>
+        </ul>
 
-      <ul class="main-nav__list main-menu main-nav__bottomline">
-        <div class="main-menu__wrapper">
-          <li class="main-menu__item">
-            <div class="main-nav__headline">
-              <h2><a href="#">Продукты и услуги</a></h2>
-              <button class="site-list__expand expand--active" type="button"><span class="visually-hidden">Развернуть/свернуть списки</span></button>
-            </div>
+        <ul class="topline__about about">
+          <li class="about__item"><a href="#">О компании</a></li>
+          <li class="about__item about__item--news"><a href="#">Новости</a></li>
+          <li class="about__item"><a href="#">Вакансии</a></li>
+          <li class="about__item"><a href="#">Контакты</a></li>
+        </ul>
 
-            <ul class="main-nav__list site-list">
-              <li class="site-list__item"><a href="#">Интернет</a></li>
-              <li class="site-list__item"><a href="#">Телефония</a></li>
-              <li class="site-list__item"><a href="#">Каналы передачи данных</a></li>
-            </ul>
+        <ul class="topline__user-list user-list">
+          <li class="user-list__item" data-title="Личный&nbsp;кабинет">
+            <a class="user-list__link user-list__link--login" href="#"></a>
           </li>
-
-          <li class="main-menu__item">
-            <div class="main-nav__headline">
-              <h2><a href="#">Решения</a></h2>
-              <button class="site-list__expand" type="button"><span class="visually-hidden">Развернуть/свернуть списки</span></button>
-            </div>
-
-            <ul class="main-nav__list site-list">
-              <li class="site-list__item"><a href="#">Решения-1</a></li>
-              <li class="site-list__item"><a href="#">Решения-2</a></li>
-              <li class="site-list__item"><a href="#">Решения-3</a></li>
-            </ul>
+          <li class="user-list__item" data-title="Обратная&nbsp;связь">
+            <a class="user-list__link user-list__link--phone" href="#" ></a>
           </li>
-
-          <li class="main-menu__item">
-            <div class="main-nav__headline">
-              <h2><a href="#">Облачные сервисы</a></h2>
-              <button class="site-list__expand" type="button"><span class="visually-hidden">Развернуть/свернуть списки</span></button>
-            </div>
-
-            <ul class="main-nav__list site-list">
-              <li class="site-list__item"><a href="#">Сервисы-1</a></li>
-              <li class="site-list__item"><a href="#">Сервисы-2</a></li>
-              <li class="site-list__item"><a href="#">Сервисы-3</a></li>
-            </ul>
+          <li class="user-list__item" data-title="Поиск">
+            <a class="user-list__link user-list__link--search" href="#" ></a>
           </li>
-        </div>
-      </ul>
-
-      <div class="main-nav__topline">
-
-        <div class="main-nav__wrapper">
-
-          <ul class="main-nav__options main-nav__list options-list">
-            <li class="options__item "><a href="#">Для дома</a></li>
-            <li class="options__item options__item--current"><a>Для бизнеса</a></li>
-          </ul>
-
-
-
-          <ul class="main-nav__about about">
-            <li class="about__item"><a href="#">О компании</a></li>
-            <li class="about__item"><a href="#">Новости</a></li>
-            <li class="about__item"><a href="#">Вакансии</a></li>
-            <li class="about__item"><a href="#">Контакты</a></li>
-          </ul>
-
-          <ul class="main-nav__list user-list">
-            <li class="user-list__item">
-              <a class="user-list__login" href="#">
-                <img src="http://placehold.it/30x30" width="30" height="30" alt="Личный кабинет">
-              </a>
-            </li>
-            <li class="user-list__item">
-              <a class="user-list__phone" href="#">
-                <img src="http://placehold.it/30x30" width="30" height="30" alt="Позвонить">
-              </a>
-            </li>
-            <li class="user-list__item">
-              <a class="user-list__search" href="#">
-                <img src="http://placehold.it/30x30" width="30" height="30" alt="Поиск">
-              </a>
-            </li>
-          </ul>
-          <p class='main-nav__contacts'>
-            <b>Санкт-Петербург</b>
-            <br>
-            <a class="contacts__phone" href="tel:+78123664040">
-              +7 (812) 366 40 40
-            </a>
-          </p>
+        </ul>
+        <p class='topline__contacts contacts'>
+          <a class="contacts__title" href="#">Санкт-Петербург</a>
+          <a class="contacts__phone" href="tel:+78123664040">
+            +7 (812) 366 40 40
+          </a>
+        </p>
       </div>
     </div>
+    <div class="main-nav__wrapper">
+      <ul class="main-nav__main-menu main-menu">
+        <li class="main-menu__item main-menu__item--expanded">
+          <a class="main-menu__title" href="#">Продукты и услуги</a>
+          <ul class="main-menu__site-list site-list">
+            <li class="site-list__item"><a href="#">Интернет</a></li>
+            <li class="site-list__item"><a href="#">Телефония</a></li>
+            <li class="site-list__item"><a href="#">Каналы передачи данных</a></li>
+          </ul>
+        </li>
+
+        <li class="main-menu__item">
+          <a class="main-menu__title" href="#">Решения</a>
+          <ul class="main-menu__site-list site-list">
+            <li class="site-list__item"><a href="#">Решения-1</a></li>
+            <li class="site-list__item"><a href="#">Решения-2</a></li>
+            <li class="site-list__item"><a href="#">Решения-3</a></li>
+          </ul>
+        </li>
+
+        <li class="main-menu__item">
+          <a class="main-menu__title" href="#">Облачные сервисы</a>
+          <ul class="main-menu__site-list site-list">
+            <li class="site-list__item"><a href="#">Сервисы-1</a></li>
+            <li class="site-list__item"><a href="#">Сервисы-2</a></li>
+            <li class="site-list__item"><a href="#">Сервисы-3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
 
   </nav>
-
 </header>
 
-    <!-- <main class="page-main">
-      <section class="business">
-        <ul class="business__list slider__list">
-          <li class="business__item slider__item">
-            <b class="business__name">Малый бизнес</b>
-            <p class="business__text">от идеи до воплощения за 3 дня</p>
-            <div class="business__picture">
-              <img src="http://placehold.it/150x100" width="50" height="33" alt="Фон слайдера Малый бизнес">
-            </div>
-          </li>
+<main class="page-main">
+  <h1 class="visually-hidden">Сайт компании "Просто телеком"</h1>
 
-          <li class="business__item slider__item">
-            <b class="business__name">Малый бизнес</b>
-            <p class="business__text">от идеи до воплощения за 3 дня</p>
-            <div class="business__picture">
-              <img src="http://placehold.it/150x100" width="50" height="33" alt="Фон слайдера Малый бизнес">
-            </div>
-          </li>
+  <section class="page-main__slider slider">
+    <div class="slider__wrapper">
+      <h2 class="visually-hidden">Предложения</h2>
 
-          <li class="business__item slider__item">
-            <b class="business__name">Малый бизнес</b>
-            <p class="business__text">от идеи до воплощения за 3 дня</p>
-            <div class="business__picture">
-              <img src="http://placehold.it/150x100" width="50" height="33" alt="Фон слайдера Малый бизнес">
-            </div>
-          </li>
+      <ul class="slider__list">
+        <li class="slider__item slider__item--current">
+          <h3 class="slider__title">Малый бизнес</h3>
+          <p class="slider__text">от идеи до воплощения 3 дня</p>
+        </li>
 
-          <button class="business__prev" type="button">Предыдущий отзыв</button>
-          <button class="business__next" type="button">Следующий отзыв</button>
+        <!--<li class="business__item slider__item">
+          <h3 class="business__name">Средний бизнес</b>
+          <p class="business__text">от идеи до воплощения за 3 дня</p>
+        </li>
+
+        <li class="business__item slider__item">
+          <h3 class="business__name">Крупный бизнес</b>
+          <p class="business__text">от идеи до воплощения за 3 дня</p>
+        </li>
+
+        <li class="business__item slider__item">
+          <h3 class="business__name">Ритейл</b>
+          <p class="business__text">от идеи до воплощения за 3 дня</p>
+        </li>-->
+      </ul>
+
+      <p class="slider__toggles">
+        <button class="slider__toggle" type="button"><span class="visually-hidden">Показать слайд 1</span></button>
+        <button class="slider__toggle" type="button"><span class="visually-hidden">Показать слайд 2</span></button>
+        <button class="slider__toggle slider__toggle--current" type="button"><span class="visually-hidden">Показать слайд 3</span></button>
+        <button class="slider__toggle" type="button"><span class="visually-hidden">Показать слайд 4</span></button>
+      </p>
+
+      <button class="slider__btn slider__btn--prev" type="button"><span class="visually-hidden">Предыдущий отзыв</span></button>
+      <button class="slider__btn slider__btn--next" type="button"><span class="visually-hidden">Следующий отзыв</span></button>
+
+    </div>
+  </section>
+
+  <section class="page-main__offers offers">
+    <div class="offers__wrapper">
+      <header class="offers__directions directions">
+        <h2 class="directions__title">Выгодные предложения для различных направлений бизнеса:</h2>
+        <ul class="directions__list">
+          <li class="directions__item"><a href="#" class="directions__link directions__link--retail">Ритейл</a></li>
+          <li class="directions__item directions__item--active"><a href="#" class="directions__link directions__link--wifi">Организация Wi-Fi зон</a></li>
+          <li class="directions__item"><a href="#" class="directions__link directions__link--call">Call-центры</a></li>
+          <li class="directions__item"><a href="#" class="directions__link directions__link--logistics">Логистика</a></li>
         </ul>
+      </header>
 
-        <p class="business__toggles slider__toggles">
-          <button class="slider__toggle" type="button">1</button>
-          <button class="slider__toggle" type="button">2</button>
-          <button class="slider__toggle" type="button">3</button>
-          <button class="slider__toggle" type="button">4</button>
+      <section class="offers__description description">
+        <h2 class="description__title">Удобный интернет-серфинг в общественных местах</h2>
+        <p class="description__text">Зоны свободного доступа в интернет для посетителей кафе, ресторанов, салонов красоты и других заведений</p>
+        <p class="description__picture">
+          <img class="description__image" src="http://placehold.it/200x200" width="200" height="200" alt="Фото преимуществ Wi-Fi">
         </p>
+        <a class="description__link" href="#">Запросить коммерческое предложение</a>
       </section>
-
-      <section class="offers">
-        <h2 class="offers__title">Выгодные предложения для различных направлений бизнеса:</h2>
-        <ul class="offers__list site-list">
-          <li class="site-list__item">
-            <a href="#">Ритейл</a>
-          </li>
-          <li class="site-list__item site-list__item--active"><a href="#">Организация Wi-Fi зон</a></li>
-          <li class="site-list__item"><a href="#">Call-центры</a></li>
-          <li class="site-list__item"><a href="#">Логистика</a></li>
-        </ul>
-
-        <div class="offers__description">
-          <h2 class="description__title">Удобный интернет-серфинг в общественных местах</h2>
-          <p class="description__text">Зоны свободного доступа в интернет для посетителей кафе, ресторанов, салонов красоты и других заведений</p>
-          <p class="description__picture">
-            <img class="description__image" src="http://placehold.it/200x200" width="200" height="200" alt="Фото преимуществ Wi-Fi">
-          </p>
-        </div>
-        <a class="offers__link link" href="#">Запросить коммерческое предложение</a>
-      </section>
-
-
-      <section class="news">
+    </div>
+  </section>
+  </main>
+    <!--  <section class="news">
         <button class="news__button button" type="button">Новости</button>
         <button class="news__button button" type="button">Публикации</button>
 
@@ -204,28 +183,57 @@
 
 
   <script>
-    var navSidebar = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.main-nav__toggle');
+    var navSidebar = document.querySelector('.page-header');
+    var navToggle = document.querySelector('.page-header__toggle');
 
-    navSidebar.classList.remove('main-nav--nojs');
+    navSidebar.classList.remove('page-header--nojs');
 
     navToggle.addEventListener('click', function() {
-      if (navSidebar.classList.contains('main-nav--closed')) {
-        navSidebar.classList.remove('main-nav--closed');
-        navSidebar.classList.add('main-nav--opened');
+      if (navSidebar.classList.contains('page-header--closed')) {
+        navSidebar.classList.remove('page-header--closed');
+        navSidebar.classList.add('page-header--opened');
       } else {
-        navSidebar.classList.add('main-nav--closed');
-        navSidebar.classList.remove('main-nav--opened');
+        navSidebar.classList.add('page-header--closed');
+        navSidebar.classList.remove('page-header--opened');
       }
     });
 
 
+    var mainMenuItems = document.querySelectorAll('.main-menu__item')
 
+    mainMenuItems.forEach (function (mainMenuItem) {
+      var mainTitle = mainMenuItem.querySelector('.main-menu__title');
+      var siteList = mainMenuItem.querySelector('.site-list');
+
+      mainTitle.addEventListener('mousedown', function() {
+
+        if (mainMenuItem.classList.contains('main-menu__item--expanded')) {
+          mainMenuItem.classList.remove('main-menu__item--expanded');
+        } else {
+          mainMenuItem.classList.add('main-menu__item--expanded');
+        }
+
+    });
+
+
+    });
 
   </script>
 
+<!--
+  mainMenuItems.forEach (function (mainMenuItem) {
+    var mainTitle = mainMenuItem.querySelector('.main-menu__title');
+    var siteList = mainMenuItem.querySelector('.site-list');
 
-
+    mainTitle.addEventListener('click', function() {
+      if (siteList.classList.contains('site-list--closed')) {
+        siteList.classList.remove('site-list--closed');
+        siteList.classList.add('site-list--opened')
+      } else {
+        siteList.classList.add('site-list--closed');
+        siteList.classList.remove('site-list--opened');
+        mainTitle.classList.remove('main-menu__title--current');
+      }-->
 </body>
 
 

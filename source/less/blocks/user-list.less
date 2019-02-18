@@ -1,0 +1,118 @@
+
+.user-list {
+  display: flex;
+}
+
+.user-list__item {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  margin-right: 8px;
+}
+.user-list__link {
+  display: block;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #3d5b99;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.user-list__link {
+  position: relative;
+  &--login {
+    background-image: url(../img/menu-login-white.png);
+  }
+  &--phone {
+    background-image: url(../img/menu-phone-white.png);
+  }
+  &--search {
+    background-image: url(../img/menu-search-white.png);
+  }
+
+
+
+}
+
+.user-list__link:hover  {
+  background-color: #fbf239;
+
+}
+
+
+
+.user-list__link {
+  &--login:hover {
+    background-image: url(../img/menu-login-black.png);
+  }
+  &--phone:hover {
+    background-image: url(../img/menu-phone-black.png);
+  }
+  &--search:hover {
+    background-image: url(../img/menu-search-black.png);
+  }
+}
+
+.user-list__link:active  {
+  background-color: gold;
+}
+
+@media (min-width: @tablet-width) {
+
+
+ .user-list {
+    order: 3;
+    min-width: 120px;
+  }
+
+.user-list__item:hover {
+    &::after {
+    position: absolute;
+    content: attr(data-title);
+
+    z-index: 5;
+    top: 42px;
+    right: 0;
+    padding: 0 12px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 30px;
+    word-wrap: normal;
+
+    background-color: #000000;
+    color: #fff;
+  }
+}
+
+
+  .user-list__link {
+    display: block;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #eaeaea;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:hover {
+      background-color: #fbf239;
+    }
+  }
+
+  .user-list__link {
+    &--login {
+      background-image: url(../img/menu-login-black.png);
+    }
+    &--phone {
+      background-image: url(../img/menu-phone-black.png);
+    }
+    &--search {
+      background-image: url(../img/menu-search-black.png);
+    }
+  }
+
+
+
+}

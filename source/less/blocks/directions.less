@@ -1,0 +1,136 @@
+.directions {
+  background-color: #eff2f9;
+  //min-height: 268px;
+  padding-top: 40px;
+
+  text-align: center;
+  line-height: 16px;
+}
+
+.directions__title {
+  font-weight: 700;
+  font-size: 16px;
+  padding: 0 50px;
+}
+
+.directions__list {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.directions__item {
+
+  font-size: 13px;
+  font-weight: 300;
+  //min-height: 125px;
+  padding-bottom: 20px;
+  width: 25%;
+
+}
+
+
+.directions__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #6e6e6e;
+}
+
+
+.directions__link::before {
+  content: "";
+  border-radius: 50%;
+  width: 62px;
+  height: 62px;
+  background-color: #263b82;
+  margin-bottom: 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.directions__link {
+
+  &--retail::before  {
+    background-image: url('../img/directions-card-yellow.png');
+  }
+
+  &--wifi::before {
+    background-image: url('../img/directions-wifi-yellow.png');
+  }
+
+  &--call::before {
+    background-image: url('../img/directions-phone-yellow.png');
+  }
+
+  &--logistics::before {
+    background-image: url('../img/directions-arrow-yellow.png');
+  }
+}
+
+
+
+.directions__item--active {
+  position: relative;
+}
+.directions__item--active::after {
+  content: "";
+  position: absolute;
+  display: block;
+
+  left: 45%;
+  bottom: -13px;
+
+  border: 26px solid transparent;
+  border-bottom: 26px solid #f0f2f9;
+  border-left: none;
+  border-top: none;
+
+  transform: rotate(-45deg);
+
+
+}
+
+
+.directions__item--active .directions__link {
+
+  color: #263b82;
+
+  &::before {
+    background-color: #fbf239;
+  }
+
+  &--retail::before {
+    background-image: url('../img/directions-card-blue.png');
+  }
+
+  &--wifi::before {
+    background-image: url('../img/directions-wifi-blue.png');
+  }
+
+  &--call::before {
+    background-image: url('../img/directions-phone-blue.png');
+  }
+
+  &--logistics::before {
+    background-image: url('../img/directions-arrow-blue.png');
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+
+  .directions {
+    background-color: #eff2f9;
+    min-height: 268px;
+    /*padding-top: 54px;
+    padding-bottom: 40px;
+    margin: -114px auto 56px;*/
+  }
+
+  .directions__title {
+    font-size: 36px;
+    line-height: 38px;
+  }
+}
+
