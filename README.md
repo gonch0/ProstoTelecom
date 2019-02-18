@@ -1,2 +1,1 @@
-# ProstoTelecom
-# Тестовое задание HtmlAcademy
+
