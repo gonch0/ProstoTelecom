@@ -1,6 +1,7 @@
 
 .user-list {
   display: flex;
+  flex-shrink: 1;
 }
 
 .user-list__item {
@@ -8,9 +9,13 @@
   width: 35px;
   height: 35px;
   margin-right: 8px;
+  &:last-child {
+    margin-right: 0;
+  }
 }
-.user-list__link {
+.user-list__btn {
   display: block;
+  background: none;
   width: 35px;
   height: 35px;
   border: 1px solid #3d5b99;
@@ -20,7 +25,7 @@
 }
 
 
-.user-list__link {
+.user-list__btn {
   position: relative;
   &--login {
     background-image: url(../img/menu-login-white.png);
@@ -36,14 +41,14 @@
 
 }
 
-.user-list__link:hover  {
+.user-list__btn:hover  {
   background-color: #fbf239;
 
 }
 
 
 
-.user-list__link {
+.user-list__btn {
   &--login:hover {
     background-image: url(../img/menu-login-black.png);
   }
@@ -55,8 +60,12 @@
   }
 }
 
-.user-list__link:active  {
+.user-list__btn:active  {
   background-color: gold;
+}
+
+.user-list__text {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -67,11 +76,9 @@
     min-width: 120px;
   }
 
-.user-list__item:hover {
-    &::after {
+  .user-list__item:hover .user-list__text {
+    display: block;
     position: absolute;
-    content: attr(data-title);
-
     z-index: 5;
     top: 42px;
     right: 0;
@@ -80,14 +87,13 @@
     font-size: 12px;
     line-height: 30px;
     word-wrap: normal;
-
     background-color: #000000;
     color: #fff;
+
   }
-}
 
 
-  .user-list__link {
+  .user-list__btn {
     display: block;
     width: 35px;
     height: 35px;
@@ -101,7 +107,7 @@
     }
   }
 
-  .user-list__link {
+  .user-list__btn {
     &--login {
       background-image: url(../img/menu-login-black.png);
     }

@@ -20,6 +20,17 @@ body {
   color: #002672;
 }
 
+/*.shadowed::after {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+}*/
+
+
 ul  {
   padding: 0;
   margin: 0;
@@ -45,8 +56,23 @@ a {
   text-decoration: none;
 }
 
+
 /*
 img {
   max-width: 100%;
   height: auto;
 }*/
+
+
+@media (min-width: @tablet-width) {
+  /*.shadowed::after {
+    display: none;
+  }*/
+
+  main {
+    min-width: 780px;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+

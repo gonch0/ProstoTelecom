@@ -1,44 +1,75 @@
 .directions {
   background-color: #eff2f9;
-  //min-height: 268px;
-  padding-top: 40px;
-
+  padding-top: 27px;
   text-align: center;
   line-height: 16px;
+
 }
 
 .directions__title {
   font-weight: 700;
   font-size: 16px;
-  padding: 0 50px;
+  padding: 0 60px;
+  margin-bottom: 27px;
 }
 
 .directions__list {
   display: flex;
-  justify-content: space-between;
-
+  position: relative;
+  justify-content: space-around;
+  padding: 0 13px;
+  //padding-bottom: 20px;
 }
 
 .directions__item {
-
   font-size: 13px;
   font-weight: 300;
-  //min-height: 125px;
-  padding-bottom: 20px;
-  width: 25%;
+  max-width: 25%;
+}
+
+
+.directions__button {
+  display: flex;
+  flex-direction: column;
+  min-height: 125px;
+  color: #6e6e6e;
+  border: none;
+  background: none;
+  padding: 0;
+  position: relative;
+  overflow: visible;
 
 }
 
 
-.directions__link {
+.directions__button--active {
+  position: relative;
+}
+
+.directions__button--active::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 44%;
+  bottom: -3px;
+  border: 28px solid transparent;
+  border-bottom: 28px solid #f0f2f9;
+  border-left: none;
+  border-top: none;
+  transform: rotate(-45deg) translateX(-50%);
+
+}
+
+
+.directions__label {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #6e6e6e;
 }
 
 
-.directions__link::before {
+
+.directions__label::before {
   content: "";
   border-radius: 50%;
   width: 62px;
@@ -49,14 +80,18 @@
   background-position: center;
 }
 
-.directions__link {
-
+.directions__label {
   &--retail::before  {
     background-image: url('../img/directions-card-yellow.png');
   }
 
   &--wifi::before {
     background-image: url('../img/directions-wifi-yellow.png');
+  }
+
+  &--call {
+    padding: 0 6px;
+    //margin-right: 10px;
   }
 
   &--call::before {
@@ -69,30 +104,27 @@
 }
 
 
-
-.directions__item--active {
-  position: relative;
-}
-.directions__item--active::after {
+/*
+.directions__button::before {
   content: "";
-  position: absolute;
-  display: block;
-
-  left: 45%;
-  bottom: -13px;
-
-  border: 26px solid transparent;
-  border-bottom: 26px solid #f0f2f9;
-  border-left: none;
-  border-top: none;
-
-  transform: rotate(-45deg);
-
-
+  border-radius: 50%;
+  width: 62px;
+  height: 62px;
+  background-color: #263b82;
+  margin-bottom: 12px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
+.directions__label--wifi ~ .directions__button {
+    background-image: url('../img/directions-wifi-yellow.png');
 
-.directions__item--active .directions__link {
+}*/
+
+
+
+.directions__button:hover .directions__label,
+.directions__button--active .directions__label {
 
   color: #263b82;
 
@@ -118,19 +150,102 @@
 }
 
 
+
 @media (min-width: @tablet-width) {
 
   .directions {
     background-color: #eff2f9;
     min-height: 268px;
-    /*padding-top: 54px;
-    padding-bottom: 40px;
-    margin: -114px auto 56px;*/
+    padding: 0;
+    padding-top: 50px;
+
+    position: relative;
   }
 
+  .directions__list {
+    max-width: 953px;
+    //width: 100%;
+    margin: 0 auto;
+    //padding: 0 30px;
+
+    //padding-left: 10px;
+    //margin: 0 60px;
+    //flex-wrap: wrap;
+    justify-content: space-between;
+
+  }
+
+
+  .directions__item {
+    max-width: none;
+
+}
+
+
   .directions__title {
+
     font-size: 36px;
     line-height: 38px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 38px;
+    flex-wrap: wrap;
+
   }
+
+  .directions__button {
+    display: table;
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 300;
+    min-height: 85px;
+    padding: 2px 10px 10px 95px;
+    width: auto;
+    position: relative;
+
+
+  }
+
+  .directions__label {
+    border-bottom: 1px dotted #6e6e6e;
+    width: auto;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    padding-top: 15px;
+    padding-left: 0px;
+    padding-bottom: 0;
+
+  }
+
+  .directions__label::before {
+
+    position: absolute;
+    //display: inline;
+    content: "";
+    border-radius: 50%;
+    width: 62px;
+    height: 62px;
+    top: 0px;
+    left: -80px;
+
+  }
+
+  .directions__button--call {
+    padding: 0;
+  }
+
+  .directions__button--active .directions__label {
+    border-bottom: none;
+  }
+
+  .directions__button--active::after {
+    left: 56%;
+    bottom: -23px;
+  }
+
+
+
 }
 
