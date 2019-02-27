@@ -3,7 +3,6 @@
   padding-top: 27px;
   text-align: center;
   line-height: 16px;
-
 }
 
 .directions__title {
@@ -14,11 +13,12 @@
 }
 
 .directions__list {
+  .list-unstyled();
   display: flex;
   position: relative;
+  flex-wrap: wrap;
   justify-content: space-around;
   padding: 0 13px;
-  //padding-bottom: 20px;
 }
 
 .directions__item {
@@ -26,7 +26,6 @@
   font-weight: 300;
   max-width: 25%;
 }
-
 
 .directions__button {
   display: flex;
@@ -39,14 +38,21 @@
   position: relative;
   overflow: visible;
 
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px gold;
+  }
+
+  &:active .directions__label::before {
+    opacity: 0.8;
+  }
 }
 
-
-.directions__button--active {
+.directions__button--current {
   position: relative;
 }
 
-.directions__button--active::after {
+.directions__button--current::after {
   content: "";
   position: absolute;
   display: block;
@@ -57,75 +63,52 @@
   border-left: none;
   border-top: none;
   transform: rotate(-45deg) translateX(-50%);
-
 }
-
 
 .directions__label {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
 
+  &::before {
+    content: "";
+    border-radius: 50%;
+    width: 62px;
+    height: 62px;
+    background-color: #263b82;
+    margin-bottom: 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/sprite.png");
+  }
 
-
-.directions__label::before {
-  content: "";
-  border-radius: 50%;
-  width: 62px;
-  height: 62px;
-  background-color: #263b82;
-  margin-bottom: 12px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.directions__label {
-  &--retail::before  {
-    background-image: url('../img/directions-card-yellow.png');
+  &--retail::before {
+    //background-image: url('../img/directions-card-yellow.png');
+    background-position: -476px 17px;
   }
 
   &--wifi::before {
-    background-image: url('../img/directions-wifi-yellow.png');
+    //background-image: url('../img/directions-wifi-yellow.png');
+    background-position: -674px 17px;
   }
 
   &--call {
     padding: 0 6px;
-    //margin-right: 10px;
   }
 
   &--call::before {
-    background-image: url('../img/directions-phone-yellow.png');
+    //background-image: url('../img/directions-phone-yellow.png');
+    background-position: -353px 14px;
   }
 
   &--logistics::before {
-    background-image: url('../img/directions-arrow-yellow.png');
+    //background-image: url('../img/directions-arrow-yellow.png');
+    background-position: -744px 19px;
   }
 }
 
-
-/*
-.directions__button::before {
-  content: "";
-  border-radius: 50%;
-  width: 62px;
-  height: 62px;
-  background-color: #263b82;
-  margin-bottom: 12px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.directions__label--wifi ~ .directions__button {
-    background-image: url('../img/directions-wifi-yellow.png');
-
-}*/
-
-
-
 .directions__button:hover .directions__label,
-.directions__button--active .directions__label {
-
+.directions__button--current .directions__label {
   color: #263b82;
 
   &::before {
@@ -133,64 +116,52 @@
   }
 
   &--retail::before {
-    background-image: url('../img/directions-card-blue.png');
+    //background-image: url('../img/directions-card-blue.png');
+    background-position: -541px 17px;
   }
 
   &--wifi::before {
-    background-image: url('../img/directions-wifi-blue.png');
+    //background-image: url('../img/directions-wifi-blue.png');
+    background-position: -607px 17px;
   }
 
   &--call::before {
-    background-image: url('../img/directions-phone-blue.png');
+    //background-image: url('../img/directions-phone-blue.png');
+    background-position: -413px 14px;
   }
 
   &--logistics::before {
-    background-image: url('../img/directions-arrow-blue.png');
+    //background-image: url('../img/directions-arrow-blue.png');
+    background-position: -815px 19px;
   }
 }
 
-
-
 @media (min-width: @tablet-width) {
-
   .directions {
     background-color: #eff2f9;
     min-height: 268px;
     padding: 0;
     padding-top: 50px;
-
     position: relative;
   }
 
   .directions__list {
     max-width: 953px;
-    //width: 100%;
     margin: 0 auto;
-    //padding: 0 30px;
-
-    //padding-left: 10px;
-    //margin: 0 60px;
-    //flex-wrap: wrap;
     justify-content: space-between;
-
   }
-
 
   .directions__item {
     max-width: none;
-
-}
-
+  }
 
   .directions__title {
-
     font-size: 36px;
     line-height: 38px;
     margin: 0;
     padding: 0;
     margin-bottom: 38px;
     flex-wrap: wrap;
-
   }
 
   .directions__button {
@@ -203,8 +174,6 @@
     padding: 2px 10px 10px 95px;
     width: auto;
     position: relative;
-
-
   }
 
   .directions__label {
@@ -214,38 +183,30 @@
     position: relative;
     display: inline-block;
     padding-top: 15px;
-    padding-left: 0px;
+    padding-left: 0;
     padding-bottom: 0;
-
   }
 
   .directions__label::before {
-
     position: absolute;
-    //display: inline;
     content: "";
     border-radius: 50%;
     width: 62px;
     height: 62px;
-    top: 0px;
+    top: 0;
     left: -80px;
-
   }
 
   .directions__button--call {
     padding: 0;
   }
 
-  .directions__button--active .directions__label {
+  .directions__button--current .directions__label {
     border-bottom: none;
   }
 
-  .directions__button--active::after {
+  .directions__button--current::after {
     left: 56%;
     bottom: -23px;
   }
-
-
-
 }
-

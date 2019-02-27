@@ -1,11 +1,11 @@
 .about {
+  .list-unstyled();
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   margin-top: 24px;
   margin-bottom: 60px;
 }
-
 
 .about__item {
   padding-left: 9px;
@@ -14,7 +14,7 @@
 }
 
 .about__item:nth-child(3n+1) {
-  padding-left: 0px;
+  padding-left: 0;
 }
 
 .about__item--news {
@@ -22,26 +22,31 @@
   border-right: 1px solid #3f5e9b;
 }
 
-
 .about__item a {
   font-size: 14px;
   font-weight: 400;
   color: #ffffff;
   opacity: 0.2;
 
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px gold;
+    color: #fbf239;
+    opacity: 1;
+  }
+
   &:hover {
-   color: #fbf239;
-   opacity: 1;
+    color: #fbf239;
+    opacity: 1;
   }
 
   &:active {
-   color: gold;
-   opacity: 1;
+    color: gold;
+    opacity: 1;
   }
 }
 
 @media (min-width: @tablet-width) {
-
   .about {
     display: none;
   }

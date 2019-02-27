@@ -2,7 +2,6 @@
   display: none;
 
   &--active {
-
     display: block;
     position: fixed;
     top: 0;
@@ -12,7 +11,6 @@
     z-index: 11;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
-
   }
 }
 
@@ -22,7 +20,6 @@
   flex-direction: row;
   flex-wrap: wrap;
   background-color: white;
-
 }
 
 .popup__title {
@@ -34,20 +31,22 @@
   margin: 0;
   margin-left: 14px;
   margin-bottom: 27px;
-
 }
 
 
 .popup__btn-close {
-  //z-index: 10;
-  border: none;
+  border: 3px solid transparent;
   order: 1;
   padding: 0;
-  width: 28px;
-  height: 28px;
+  width: 35px;
+  height: 35px;
   background: none;
   position: relative;
 
+  &:focus {
+    outline: none;
+    border-color: gold;
+  }
 
   &::before {
     position: absolute;
@@ -60,13 +59,13 @@
     border-width: 0 0 1px 1px;
     padding: 3px;
     transform: rotate(45deg);
-
   }
+
   &::after {
     position: absolute;
     content: "";
     top: 13px;
-    left: 0px;
+    left: 0;
     width: 25px;
     height: 1px;
     background-color: #82a2e0;
@@ -75,17 +74,18 @@
   &:hover::before {
     border-color: #123885;
   }
+
   &:hover::after {
     background-color: #123885;
   }
+
   &:active::before {
     border-color: rgba(18, 56, 133, 0.3);
   }
+
   &:active::after {
     background-color: rgba(18, 56, 133, 0.3);
   }
-
-
 }
 
 
@@ -95,25 +95,17 @@
   justify-content: center;
   width: 100%;
   margin-bottom: 28px;
-
 }
 
 .popup__toggle {
-  //border: none;
   width: 100%;
   padding: 10px;
   background: none;
   border: 1px solid #97adef;
-
   font-family: inherit;
   font-size: 12px;
   line-height: 12px;
   color: #263b82;
-
-  &--current {
-    color: white;
-    background-color: #263b82;
-  }
 
   &:hover {
     color: white;
@@ -125,6 +117,11 @@
     color: rgba(255, 255, 255, 0.5);
   }
 
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px gold;
+  }
+
   &:first-child {
     border-radius: 20px 0 0 20px;
   }
@@ -132,22 +129,13 @@
   &:last-child {
     border-radius: 0 20px 20px 0;
   }
-
 }
 
 .popup__tabs {
+  .list-unstyled();
   order: 5;
   width: 100%;
 }
-
-.popup__tab {
-  display: none;
-
-  &--current {
-    display: block;
-  }
-}
-
 
 .popup__help {
   border: 2px solid #fbf239;
@@ -168,7 +156,7 @@
   display: none;
 }
 
-.popup__help:hover .popup__help-text  {
+.popup__help:hover .popup__help-text {
   display: block;
   position: absolute;
   top: 60px;
@@ -178,11 +166,9 @@
   font-size: 12px;
   line-height: 14px;
   word-wrap: normal;
-
   max-width: 230px;
-
   background-color: #000000;
-  color: #fff;
+  color: #ffffff;
 
   &::before {
     content: "";
@@ -190,33 +176,25 @@
     top: -15px;
     right: 47px;
     border: solid 9px transparent;
-    border-bottom: solid 7px #000;
+    border-bottom: solid 7px #000000;
   }
-
 }
 
-
 @media (min-width: @tablet-width) {
-
   .popup--active {
     left: -10px;
   }
 
-
   .popup__wrapper {
-
     position: absolute;
-
     top: 132px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     flex-wrap: wrap;
     width: 704px;
-    padding: 0px 25px 31px;
-
+    padding: 0 25px 31px;
   }
-
 
   .popup__title {
     order: 1;
@@ -225,7 +203,6 @@
     font-weight: 700;
     margin: 6px 20px 0 7px;
   }
-
 
   .popup__btn-close {
     order: 2;
@@ -241,8 +218,8 @@
       border: solid black;
       border-width: 0 0 1px 1px;
       transform: rotate(-135deg);
-
     }
+
     &::after {
       background-color: transparent;
       top: 6px;
@@ -258,49 +235,25 @@
     &:hover::before {
       border-color: rgba(0, 0, 0, 0.6);
     }
+
     &:hover::after {
       border-color: rgba(0, 0, 0, 0.6);
       background-color: transparent;
     }
+
     &:active::before,
     &:active::after {
       border-color: rgba(0, 0, 0, 0.3);
     }
-
-
   }
-
 
   .popup__help {
     order: 2;
-  }
-
-  .popup__toggles {
-    order: 3;
-    display: flex;
-    justify-content: center;
-    min-width: 274px;
-    //height: 30px;
-    width: auto;
-    margin: 34px 8px 28px;
-
-  }
-
-  .popup__toggle {
-    font-size: 14px;
-    line-height: 12px;
-  }
-
-
-  .popup__help {
-
     margin-top: 35px;
     margin-right: 15px;
   }
 
-
-  .popup__help:hover .popup__help-text  {
-
+  .popup__help:hover .popup__help-text {
     z-index: 12;
     top: 70px;
     left: 35px;
@@ -309,10 +262,19 @@
     &::before {
       right: 15px;
     }
-
   }
 
+  .popup__toggles {
+    order: 3;
+    display: flex;
+    justify-content: center;
+    min-width: 274px;
+    width: auto;
+    margin: 34px 8px 28px;
+  }
 
-
-
+  .popup__toggle {
+    font-size: 14px;
+    line-height: 12px;
+  }
 }

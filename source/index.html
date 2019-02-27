@@ -1,51 +1,28 @@
 <!DOCTYPE html>
-
 <html lang="ru">
 <head>
   <meta charset="utf-8">
   <title>Prosto telecom</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <!-- Pixel Glass -->
-  <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position:  50% 0;
-      /* Mobile layout by default */
-      background-image: url( "img/320.png" );
-    }
-    /* Tablet */
-    @media ( min-width: 1072px ) {
-      HTML {
-        /* Tablet layout */
-        background-image: url( "img/1072.jpg" );
-      }
-    }
-
-  </style>
-  <link href="css/pixelglass.css" rel="stylesheet">
-  <script src="js/pixelglass.js"></script>
-  <!-- // Pixel Glass -->
-
+  <link rel="stylesheet" type="text/css" href="css/style.min.css">
 </head>
 <body>
 
 <header class="page-header page-header--closed page-header--nojs">
   <div class="page-header__logo-wrapper">
     <a class="page-header__logo">
-      <img src="img/logo.png" width='198' height='47' alt="Простотелеком логотип">
+      <img src="img/logo.png" width="198" height="47" alt="Простотелеком логотип">
     </a>
 
     <button class="page-header__toggle" type="button"><span class="visually-hidden">Меню</span></button>
   </div>
 
-  <nav class="page-header__main-nav main-nav">
-
+  <nav class="page-header__main-nav main-nav main-nav--nojs">
     <div class="main-nav__topline topline">
       <div class="topline__wrapper">
         <ul class="topline__options options">
-          <li class="options__item"><a href="#">Для дома</a></li>
-          <li class="options__item options__item--current"><a>Для бизнеса</a></li>
+          <li class="options__item"><button>Для дома</button></li>
+          <li class="options__item options__item--current"><button disabled>Для бизнеса</button></li>
         </ul>
 
         <ul class="topline__about about">
@@ -53,77 +30,71 @@
           <li class="about__item about__item--news"><a href="#">Новости</a></li>
           <li class="about__item"><a href="#">Вакансии</a></li>
           <li class="about__item"><a href="#">Контакты</a></li>
-
         </ul>
 
         <ul class="topline__user-list user-list">
           <li class="user-list__item">
-            <button class="user-list__btn user-list__btn--login" href="#">
+            <button class="user-list__btn user-list__btn--login">
               <span class="user-list__text">Личный&nbsp;кабинет</span>
             </button>
           </li>
           <li class="user-list__item">
-            <button class="user-list__btn user-list__btn--phone" href="#">
+            <button class="user-list__btn user-list__btn--phone">
               <span class="user-list__text">Обратная&nbsp;связь</span>
             </button>
           </li>
           <li class="user-list__item">
-            <a class="user-list__btn user-list__btn--search" href="#">
+            <button class="user-list__btn user-list__btn--search">
               <span class="user-list__text">Поиск</span>
-            </a>
+            </button>
           </li>
         </ul>
+
         <p class='topline__contacts contacts'>
-          <a class="contacts__title" href="#">Санкт-Петербург</a>
-          <a class="contacts__phone" href="tel:+78123664040">
+          <button class="contacts__title" tabindex="1">Санкт-Петербург</button>
+          <a class="contacts__phone" href="tel:+78123664040" tabindex="1">
             +7 (812) 366 40 40
           </a>
         </p>
       </div>
     </div>
-    <!--<div class="main-nav__wrapper">-->
-      <ul class="main-nav__main-menu main-menu">
-        <li class="main-menu__item main-menu__item--expanded">
-          <a class="main-menu__title" href="#">Продукты и услуги</a>
-          <ul class="main-menu__site-list site-list">
-            <li class="site-list__item"><a href="#">Интернет</a></li>
-            <li class="site-list__item"><a href="#">Телефония</a></li>
-            <li class="site-list__item"><a href="#">Каналы передачи данных</a></li>
-          </ul>
-        </li>
 
-        <li class="main-menu__item">
-          <a class="main-menu__title" href="#">Решения</a>
-          <ul class="main-menu__site-list site-list">
-            <li class="site-list__item"><a href="#">Решения-1</a></li>
-            <li class="site-list__item"><a href="#">Решения-2</a></li>
-            <li class="site-list__item"><a href="#">Решения-3</a></li>
-          </ul>
-        </li>
+    <ul class="main-nav__main-menu main-menu">
+      <li class="main-menu__item main-menu__item--expanded">
+        <button class="main-menu__title">Продукты и услуги</button>
+        <ul class="main-menu__site-list site-list">
+          <li class="site-list__item"><a href="#">Интернет</a></li>
+          <li class="site-list__item"><a href="#">Телефония</a></li>
+          <li class="site-list__item"><a href="#">Каналы передачи данных</a></li>
+        </ul>
+      </li>
 
-        <li class="main-menu__item">
-          <a class="main-menu__title" href="#">Облачные сервисы</a>
-          <ul class="main-menu__site-list site-list">
-            <li class="site-list__item"><a href="#">Сервисы-1</a></li>
-            <li class="site-list__item"><a href="#">Сервисы-2</a></li>
-            <li class="site-list__item"><a href="#">Сервисы-3</a></li>
-          </ul>
-        </li>
-      </ul>
+      <li class="main-menu__item">
+        <button class="main-menu__title">Решения</button>
+        <ul class="main-menu__site-list site-list">
+          <li class="site-list__item"><a href="#">Решения-1</a></li>
+          <li class="site-list__item"><a href="#">Решения-2</a></li>
+          <li class="site-list__item"><a href="#">Решения-3</a></li>
+        </ul>
+      </li>
 
-    <!--</div>-->
-
-
+      <li class="main-menu__item">
+        <button class="main-menu__title">Облачные сервисы</button>
+        <ul class="main-menu__site-list site-list">
+          <li class="site-list__item"><a href="#">Сервисы-1</a></li>
+          <li class="site-list__item"><a href="#">Сервисы-2</a></li>
+          <li class="site-list__item"><a href="#">Сервисы-3</a></li>
+        </ul>
+      </li>
+    </ul>
   </nav>
 </header>
 
 <main class="page-main">
   <h1 class="visually-hidden">Сайт компании "Просто телеком"</h1>
-
   <section class="page-main__slider slider">
 
     <h2 class="visually-hidden">Предложения</h2>
-
     <ul class="slider__list">
       <li class="slider__item">
         <b class="slider__title">Крупный бизнес</b>
@@ -160,14 +131,13 @@
 
     <button class="slider__btn slider__btn--prev" type="button"><span class="visually-hidden">Предыдущий отзыв</span></button>
     <button class="slider__btn slider__btn--next" type="button"><span class="visually-hidden">Следующий отзыв</span></button>
-
-
   </section>
 
   <section class="page-main__offers offers">
     <div class="offers__wrapper">
       <section class="offers__directions directions">
         <h2 class="directions__title">Выгодные предложения <br> для различных направлений бизнеса:</h2>
+
         <ul class="directions__list">
           <li class="directions__item">
             <button class="directions__button" type="button">
@@ -175,7 +145,7 @@
             </button>
           </li>
           <li class="directions__item">
-            <button class="directions__button directions__button--active" type="button" disabled>
+            <button class="directions__button directions__button--current" type="button" disabled>
               <span class="directions__label directions__label--wifi">Организация Wi-Fi зон</span>
             </button>
           </li>
@@ -193,7 +163,6 @@
       </section>
 
       <ul class="offers__descriptions descriptions">
-
         <li class="descriptions__item">
           <div class="descriptions__picture"></div>
           <div class="descriptions__words">
@@ -204,8 +173,7 @@
           </div>
         </li>
 
-        <li class="descriptions__item descriptions__item--active">
-
+        <li class="descriptions__item descriptions__item--current">
           <h3 class="descriptions__title">
             <span>Удобный</span>
             <span>интернет-серфинг</span>
@@ -214,7 +182,6 @@
           </h3>
           <p class="descriptions__text">Зоны свободного доступа в интернет для посетителей кафе, ресторанов, салонов красоты и других заведений</p>
           <a class="descriptions__button button" href="#">Запросить коммерческое предложение</a>
-
         </li>
 
         <li class="descriptions__item">
@@ -237,20 +204,18 @@
           </div>
         </li>
       </ul>
-
     </div>
   </section>
 
   <section class="info">
     <h2 class="visually-hidden">Новости и предложения</h2>
-
     <div class="info__buttons">
       <button class="info__button info__button--current" type="button" disabled>Новости</button>
       <button class="info__button" type="button">Публикации</button>
     </div>
 
     <ul class="info__content content">
-      <li class="content__block content__block--active content__news news">
+      <li class="content__block content__block--current content__news">
         <ul class="content__list">
           <li class="content__item">
             <h3 class="content__title">«ПРОСТО Телеком» приступает к оказанию услуг телефонии в Пензе</h3>
@@ -269,32 +234,33 @@
           </li>
         </ul>
 
-        <a class="content__button button" href="#">Ещё новости</a>
+        <button class="content__button button" type="button">Ещё новости</button>
       </li>
 
-      <li class="content__block content__block content__publications publications">
+      <li class="content__block content__block content__publications">
         <ul class="content__list">
           <li class="content__item">
-            <h3 class="content__title">Публикация 1</h3>
-            <p class="content__text">Корпоративные клиенты в Пензе теперь могут приобрести городские телефонные номера у оператора связи "ПРОСТО Телеком"</p>
+            <h3 class="content__title">DNS (англ. Domain Name System «система доменных имён») </h3>
+            <p class="content__text">Начиная с 2010 года в систему DNS внедряются средства проверки целостности передаваемых данных, называемые DNS Security Extensions (DNSSEC). Передаваемые данные не шифруются, но их достоверность проверяется криптографическими способами</p>
             <time class="content__date" datetime="2014-11-07">7 ноября 2014</time>
           </li>
 
           <li class="content__item content__item--current">
-            <h3 class="content__title">Публикация 2</h3>
-            <p class="content__text">17 лет назад в Петербурге была основана компания "ПРОСТО телеком". За эти годы компания из небольшого интернет-провайдера превратилась в универсального оператора связи федерального масштаба</p>
+            <h3 class="content__title">Домашний маршрутизатор</h3>
+            <p class="content__text">В бытовом секторе обычно используются маршрутизаторы, обеспечивающие подключение домашней сети компьютеров к каналу связи интернет-провайдера.</p>
             <time class="content__date" datetime="2014-11-14">14 ноября 2014</time>
           </li>
           <li class="content__item">
-            <h3 class="content__title">Публикация 3</h3>
-            <p class="content__text">С 15 сентября корпоративные клиенты в Пензе могут бесплатно подключить пакет "Интернет + Телефон"</p>
+            <h3 class="content__title">История протокола HTTP</h3>
+            <p class="content__text">HTTP был предложен в марте 1991 года Тимом Бернерсом-Ли, работавшим тогда в CERN, как механизм для доступа к документам в Интернете и облегчения навигации посредством использования гипертекста.</p>
             <time class="content__date" datetime="2014-11-21">21 ноября 2014</time>
           </li>
         </ul>
 
-        <a class="content__button button" href="#">Ещё новости</a>
+        <button class="content__button button" type="button">Ещё публикации</button>
       </li>
     </ul>
+
     <ul class="info__toggles">
       <li class="info__toggles-item">
         <button class="info__toggle" type="button"><span class="visually-hidden">Показать новость 1</span></button>
@@ -308,20 +274,18 @@
     </ul>
   </section>
 
-
-  <section class="popup   account">
+  <section class="popup account">
     <div class="popup__wrapper">
       <h2 class="popup__title">Личный кабинет</h2>
-
       <button class="popup__btn-close" type="button"><span class="visually-hidden">Закрыть личный кабинет</span></button>
 
-      <div class="popup__toggles">
-        <button class="popup__toggle popup__toggle--current" type="button" disabled>Регистрация</button>
-        <button class="popup__toggle" type="button">Авторизация</button>
+      <div class="popup__toggles account__toggles">
+        <button class="popup__toggle account__toggle account__toggle--current" type="button" disabled>Регистрация</button>
+        <button class="popup__toggle account__toggle" type="button">Авторизация</button>
       </div>
 
-      <ul class="popup__tabs">
-        <li class="popup__tab popup__tab--current">
+      <ul class="popup__tabs account__tabs">
+        <li class="popup__tab account__tab account__tab--current">
           <form class="popup__form form" action="https://echo.htmlacademy.ru" method="post">
             <div class="form__field">
               <label class="visually-hidden" for="name">Имя</label>
@@ -337,28 +301,28 @@
             </div>
             <div class="form__field">
               <label class="visually-hidden" for="phone">Телефон</label>
-              <input class="form__input" type="tel" id="phone" name="phone" placeholder="Телефон" required>
+              <input class="form__input" type="tel" id="phone" name="phone" placeholder="Телефон" autocomplete="tel" required>
             </div>
             <div class="form__field">
               <label class="visually-hidden" for="password">Пароль</label>
-              <input class="form__input" type="password" id="password" name="password" placeholder="Пароль" required>
+              <input class="form__input" type="password" id="password" name="password" placeholder="Пароль" autocomplete="new-password" required>
             </div>
             <div class="form__field">
               <label class="visually-hidden" for="password-repeat">Подтверждение пароля</label>
-              <input class="form__input" type="password" id="password-repeat" name="password-repeat" placeholder="Подтвердите пароль" required>
+              <input class="form__input" type="password" id="password-repeat" name="password-repeat" placeholder="Подтвердите пароль" autocomplete="new-password" required>
             </div>
             <button class="form__submit" type="submit">Зарегистрироваться</button>
           </form>
         </li>
 
-        <li class="popup__tab">
+        <li class="popup__tab account__tab">
           <p>Авторизация</p>
         </li>
       </ul>
     </div>
   </section>
 
-  <section class="popup  feedback">
+  <section class="popup feedback">
     <div class="popup__wrapper feedback__wrapper">
       <h2 class="popup__title feedback__title">Обратная связь</h2>
 
@@ -366,14 +330,14 @@
       <i class="popup__help"><span class="popup__help-text">После обработки сообщения, с Вами свяжется наш менеджер</span>?</i>
 
       <div class="popup__toggles feedback__toggles">
-        <button class="popup__toggle popup__toggle--current feedback__toggle" type="button" disabled>Частный клиент</button>
+        <button class="popup__toggle feedback__toggle feedback__toggle--current " type="button" disabled>Частный клиент</button>
         <button class="popup__toggle feedback__toggle" type="button">Юридическое лицо</button>
         <button class="popup__toggle feedback__toggle" type="button">Промо-офис</button>
       </div>
 
-      <ul class="popup__tabs">
+      <ul class="popup__tabs feedback__tabs">
 
-        <li class="popup__tab popup__tab--current feedback__tab">
+        <li class="popup__tab feedback__tab feedback__tab--current">
           <form class="popup__form feedback__form form" action="https://echo.htmlacademy.ru" method="post">
 
             <fieldset class="form__group form__group--client">
@@ -427,15 +391,13 @@
             <fieldset class="form__group form__group--type">
               <legend class="form__title">Тип обращения</legend>
 
-              <div class="form__field form__field--datalist">
+              <div class="form__field custom-select">
                 <label class="visually-hidden" for="appeal-type">Типы услуг</label>
-                <!--<input class="form__input" type="text" id="appeal-type" name="appeal-type" placeholder="Выберите тип услуги:" list="appeal-types" required>-->
-
-                <select class="form__input form__appeal-types" type="text" id="appeal-type" name="appeal-type" placeholder="Выберите тип услуги:">
-                  <option>Интернет</option>
-                  <option>Телефония</option>
-                  <option>Казань</option>
-                  <option>Каналы передачи данных</option>
+                <select class="form__input custom-select__select" id="appeal-type" name="appeal-type" required>
+                  <option value="">Выберите тип услуги</option>
+                  <option value="1">Интернет</option>
+                  <option value="2">Телефония</option>
+                  <option value="3">Каналы передачи данных</option>
                 </select>
               </div>
             </fieldset>
@@ -443,18 +405,15 @@
             <fieldset class="form__group form__group--topic">
               <legend class="form__title">Тема обращения</legend>
 
-              <div class="form__field form__field--datalist">
+              <div class="form__field custom-select">
                 <label class="visually-hidden" for="appeal-topic">Тема обращения</label>
-                <input class="form__input" type="text" id="appeal-topic" name="appeal-topic" placeholder="Выберите наиболее подходящую" list="appeal-topics" required>
-
-                <datalist class="form__appeal-topics" id="appeal-topics">
-                  <option>Москва</option>
-                  <option>Екатеринбург</option>
-                  <option>Казань</option>
-                  <option>Тверь</option>
-                </datalist>
+                <select class="form__input custom-select__select" id="appeal-topic" name="appeal-topic"  required>
+                  <option value="">Выберите тему</option>
+                  <option value="1">Оплата услуг</option>
+                  <option value="2">Скорость интернета</option>
+                  <option value="3">Прокладка сетей</option>
+                </select>
               </div>
-
             </fieldset>
 
             <fieldset class="form__group form__group--text">
@@ -471,27 +430,19 @@
           </form>
         </li>
 
-        <li class="popup__tab">
+        <li class="popup__tab feedback__tab">
           <p>Форма для юридических лиц</p>
         </li>
 
-        <li class="popup__tab">
+        <li class="popup__tab feedback__tab">
           <p>Форма "Промо-офис</p>
         </li>
       </ul>
     </div>
-
-
   </section>
-
-
-
-
 </main>
 
+  <script src="js/script.min.js"></script>
 
-  <script src='js/script.js'> </script>
 </body>
-
-
 </html>

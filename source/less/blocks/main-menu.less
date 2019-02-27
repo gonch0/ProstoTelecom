@@ -1,9 +1,20 @@
+.main-menu {
+  .list-unstyled();
+}
+
 .main-menu__item {
   position: relative;
-
+  padding-top: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #21509f;
 }
 
 .main-menu__title {
+  background: none;
+  border: none;
+  padding: 0;
+  width: 100%;
+  text-align: left;
   color: #ffffff;
   font-size: 16px;
   font-weight: 500;
@@ -13,45 +24,36 @@
   }
 
   &:focus {
-    color: gold;
+    outline: none;
+    box-shadow: 0 0 0 3px gold;
   }
 
   &:active {
     opacity: 0.5;
   }
-
 }
-
-
 
 .main-menu__title::after {
   content: "";
   position: absolute;
-  right: 0px;
+  right: 0;
   top: 13px;
 
   width: 20px;
   height: 20px;
   border: 1px solid #405f9d;
   border-radius: 50%;
-  background: url('../img/menu-expand-white.png') no-repeat center;
+  background-image: url("../img/sprite.png");
+  background-position: 4px 6px;
 }
 
 .main-menu__title:hover::after {
-  background-image:url('../img/menu-expand-yellow.png');
-}
-
-
-.main-menu__item {
-  padding-top: 14px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #21509f;
+  //background-image:url('../img/menu-expand-yellow.png');
+  background-position: -36px 6px;
 }
 
 @media (max-width: @mobile-width-only) {
-
-
-  .main-menu__item .main-menu__site-list {
+  .main-menu__site-list {
     display: none;
   }
 
@@ -61,16 +63,15 @@
 
   .main-menu__item--expanded .main-menu__title {
     color: #fbf239;
+
     &::after {
-      background: url(../img/menu-expand-yellow.png) no-repeat center;
+      background-position: -36px 6px;
       transform: rotate(180deg);
     }
   }
-
 }
 
 @media (min-width: @tablet-width) {
-
   .main-menu__site-list,
   .main-menu__title::after {
     display: none;
@@ -78,25 +79,15 @@
 
   .main-menu {
     display: inline-flex;
-    //text-align: center;
     justify-content: center;
     min-height: 43px;
     align-items: center;
     flex-wrap: wrap;
-    //max-width: @tablet-width;
     width: 100%;
     margin: 0 auto;
     order: 4;
     background-color: #002672;
-
   }
-
-  /*.main-nav__wrapper {
-    background: #002672;
-    margin: 0;
-    order: 2;
-  }*/
-
 
   .main-menu__item {
     border: none;
@@ -108,11 +99,5 @@
     font-size: 15px;
     line-height: 18px;
     font-weight: 400;
-  }
-
-
-
-  .main-menu__item::last-child {
-    margin-right: 0px;
   }
 }

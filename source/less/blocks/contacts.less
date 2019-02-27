@@ -5,20 +5,23 @@
 .contacts__title {
   text-transform: uppercase;
   color: #ffffff;
+  padding: 0;
+  background: none;
+  border: none;
   font-size: 14px;
   font-weight: 900;
   display: block;
+  min-width: 58%;
+  text-align: left;
   margin-bottom: 10px;
   position: relative;
-}
 
-.contacts__title {
   &::before,
-  &::after  {
+  &::after {
     position: absolute;
     content: "";
     top: 5px;
-    right: 105px;
+    right: 0;
 
     width: 9px;
     height: 2px;
@@ -31,7 +34,6 @@
     top: 10px;
     transform: rotate(-45deg);
   }
-
 }
 
 .contacts__phone {
@@ -40,33 +42,40 @@
   font-weight: 300;
 }
 
-
-.contacts a {
-
+.contacts a,
+.contacts button {
   &:hover {
-   color: #fbf239;
-   opacity: 1;
+    color: #fbf239;
+    opacity: 1;
   }
 
   &:active {
-   color: gold;
-   opacity: 1;
+    color: gold;
+    opacity: 1;
   }
 
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px gold;
+  }
 }
 
-.contacts__title:hover::before,
-.contacts__title:hover::after {
-   background-color: #fbf239;
+.contacts__title:hover {
+  &::before {
+    background-color: #fbf239;
+  }
+
+  &::after {
+    background-color: #fbf239;
+  }
 }
 
 .contacts__title:active::before,
 .contacts__title:active::after {
-   background-color: gold;
+  background-color: gold;
 }
 
 @media (min-width: @tablet-width) {
-
   .contacts {
     order: 1;
     margin: 0;
@@ -76,20 +85,18 @@
     min-width: 130px;
   }
 
-  .contacts a {
+  .contacts a,
+  .contacts button {
     color: black;
   }
-
 
   .contacts__title {
     margin-bottom: 0;
 
     &::before,
-    &::after  {
-
+    &::after {
       top: 5px;
       right: -13px;
-
       width: 7px;
       height: 2px;
       background-color: black;
@@ -101,6 +108,5 @@
       right: -18px;
       transform: rotate(-45deg);
     }
-
   }
 }

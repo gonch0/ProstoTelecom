@@ -1,4 +1,5 @@
 .options {
+  .list-unstyled();
   position: absolute;
   top: 20px;
   left: 24px;
@@ -7,10 +8,7 @@
   width: 187px;
 }
 
-
-
 .options__item {
-
   &--current {
     color: #ffffff;
     position: relative;
@@ -25,62 +23,63 @@
       background: #fbf239;
     }
   }
-
 }
 
-.options__item a {
+.options__item button {
+  padding: 0;
+  background: none;
+  border: none;
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
-}
-
-
-.options__item:not(.options__item--current) a {
   color: #41609d;
 
   &:hover {
-  color: #fbf239;
+    color: #fbf239;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px gold;
   }
 
   &:active {
-  opacity: 0.5;
+    color: #ffffff;
   }
+}
 
+.options__item--current button {
+  color: #ffffff;
 }
 
 @media (min-width: @tablet-width) {
-
   .options {
     position: static;
     order: 2;
     min-width: 22%;
-    margin-left: 0px;
-    //padding-l: 200px;
+    margin-left: 0;
     justify-content: space-between;
     flex-wrap: wrap;
   }
 
-  .options__item a:visited {
-    color: #cbcace;
-  }
 
-
-  .options__item a {
+  .options__item button {
     color: #cbcace;
     font-size: 20px;
     font-weight: 700;
+
+    &:active {
+      color: gold;
+    }
   }
 
-  .options__item--current a {
+  .options__item--current button {
     color: #002672;
-  }
-
-  .options__item {
-    margin-right: 0px;
   }
 
   .options__item--current {
     margin-right: 0;
+
     &::after {
       top: 25px;
     }

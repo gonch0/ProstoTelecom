@@ -1,0 +1,95 @@
+/* Кастомный селектор, немного переделанный и взятый отсюда:
+https://www.w3schools.com/howto/howto_custom_select.asp
+*/
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+}
+
+.custom-select__select {
+  display: none; /*hide original SELECT element: */
+}
+
+/* Style the arrow inside the select element: */
+.select-selected::after {
+  position: absolute;
+  content: "";
+  top: 24px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: black transparent transparent transparent;
+}
+
+.custom-select .select-placeholder {
+  padding-top: 17px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #b3b3b3;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active {
+  font-size: 12px;
+  color: #757575;
+  box-shadow: 0 0 10px 0 rgba(85, 119, 231, 0.31);
+}
+
+.select-selected.select-arrow-active::after {
+  border-color: transparent transparent #cccccc transparent;
+  top: 14px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+  padding: 15px;
+  padding-top: 17px;
+  width: 100%;
+  height: 56px;
+  color: black;
+  background-color: white;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  border: solid 1px transparent;
+  outline: 0;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px gold;
+  }
+}
+
+.select-items div {
+  height: 41px;
+  padding: 12px 15px;
+
+  &:focus {
+    background-color: #fff42c;
+  }
+}
+
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+
+  border-color: #97aeef;
+  box-shadow: 0 5px 10px 0 rgba(85, 119, 231, 0.31);
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: #fff42c;
+}

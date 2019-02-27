@@ -1,5 +1,5 @@
-
 .user-list {
+  .list-unstyled();
   display: flex;
   flex-shrink: 1;
 }
@@ -9,10 +9,12 @@
   width: 35px;
   height: 35px;
   margin-right: 8px;
+
   &:last-child {
     margin-right: 0;
   }
 }
+
 .user-list__btn {
   display: block;
   background: none;
@@ -22,56 +24,61 @@
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position: center;
-}
+  background-image: url("../img/sprite.png");
 
-
-.user-list__btn {
   position: relative;
+
   &--login {
-    background-image: url(../img/menu-login-white.png);
+    //background-image: url(../img/menu-login-white.png);
+    background-position: -72px 7px;
   }
+
   &--phone {
-    background-image: url(../img/menu-phone-white.png);
+    //background-image: url(../img/menu-phone-white.png);
+    background-position: -314px 7px;
   }
+
   &--search {
-    background-image: url(../img/menu-search-white.png);
+    //background-image: url(../img/menu-search-white.png);
+    background-position: -216px 7px;
   }
 
-
-
-}
-
-.user-list__btn:hover  {
-  background-color: #fbf239;
-
-}
-
-
-
-.user-list__btn {
   &--login:hover {
-    background-image: url(../img/menu-login-black.png);
+    //background-image: url(../img/menu-login-black.png);
+    background-position: -119px 7px;
   }
+
   &--phone:hover {
-    background-image: url(../img/menu-phone-black.png);
+    //background-image: url(../img/menu-phone-black.png);
+    background-position: -264px 7px;
   }
+
   &--search:hover {
-    background-image: url(../img/menu-search-black.png);
+    //background-image: url(../img/menu-search-black.png);
+    background-position: -166px 7px;
+  }
+
+  &:hover {
+    background-color: #fbf239;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px gold;
+  }
+
+  &:active {
+    background-color: gold;
   }
 }
 
-.user-list__btn:active  {
-  background-color: gold;
-}
 
 .user-list__text {
   display: none;
 }
 
 @media (min-width: @tablet-width) {
-
-
- .user-list {
+  .user-list {
     order: 3;
     min-width: 120px;
   }
@@ -88,10 +95,8 @@
     line-height: 30px;
     word-wrap: normal;
     background-color: #000000;
-    color: #fff;
-
+    color: #ffffff;
   }
-
 
   .user-list__btn {
     display: block;
@@ -102,23 +107,23 @@
     background-repeat: no-repeat;
     background-position: center;
 
+    &--login {
+      //background-image: url(../img/menu-login-black.png);
+      background-position: -119px 7px;
+    }
+
+    &--phone {
+      //background-image: url(../img/menu-phone-black.png);
+      background-position: -264px 7px;
+    }
+
+    &--search {
+      //background-image: url(../img/menu-search-black.png);
+      background-position: -166px 7px;
+    }
+
     &:hover {
       background-color: #fbf239;
     }
   }
-
-  .user-list__btn {
-    &--login {
-      background-image: url(../img/menu-login-black.png);
-    }
-    &--phone {
-      background-image: url(../img/menu-phone-black.png);
-    }
-    &--search {
-      background-image: url(../img/menu-search-black.png);
-    }
-  }
-
-
-
 }
