@@ -16,7 +16,7 @@
         var key = contentKeys[j];
         var contentResult = content[i][key];
         newContentItem.querySelector('.content__' + key).textContent = contentResult;
-        newContentItem.querySelector('.content__date').setAttribute("datetime", content[i]['datetime']);
+        newContentItem.querySelector('.content__date').setAttribute('datetime', content[i]['datetime']);
       }
       contentFragment.appendChild(newContentItem);
     }
@@ -37,7 +37,7 @@
 
     var xhr = new XMLHttpRequest();
     //xhr.responseType = 'json'; (в IE11 не поддерживается)
-    xhr.overrideMimeType("application/json");
+    xhr.overrideMimeType('application/json');
     xhr.open(method.get, url);
 
     xhr.onload = function () {

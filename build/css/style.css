@@ -640,7 +640,7 @@ img {
   height: 4px;
   background: #fbf239;
 }
-.options__item button {
+.options__item a {
   padding: 0;
   background: none;
   border: none;
@@ -649,18 +649,18 @@ img {
   font-weight: 500;
   color: #41609d;
 }
-.options__item button:hover {
+.options__item a:hover {
   color: #fbf239;
 }
-.options__item button:focus {
+.options__item a:focus {
   outline: none;
   -webkit-box-shadow: 0 0 0 3px gold;
           box-shadow: 0 0 0 3px gold;
 }
-.options__item button:active {
+.options__item a:active {
   color: #ffffff;
 }
-.options__item--current button {
+.options__item--current a {
   color: #ffffff;
 }
 @media (min-width: 780px) {
@@ -677,15 +677,15 @@ img {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .options__item button {
+  .options__item a {
     color: #cbcace;
     font-size: 20px;
     font-weight: 700;
   }
-  .options__item button:active {
+  .options__item a:active {
     color: gold;
   }
-  .options__item--current button {
+  .options__item--current a {
     color: #002672;
   }
   .options__item--current {
@@ -736,7 +736,7 @@ img {
   height: 20px;
   border: 1px solid #405f9d;
   border-radius: 50%;
-  background-image: url("https://i.ibb.co/BBWqpc9/sprite.png");
+  background-image: url("../img/sprite.png");
   background-position: 4px 6px;
 }
 .main-menu__title:hover::after {
@@ -902,7 +902,7 @@ img {
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("https://i.ibb.co/BBWqpc9/sprite.png");
+  background-image: url("../img/sprite.png");
   position: relative;
 }
 .user-list__btn--login {
@@ -1102,22 +1102,22 @@ img {
   display: none;
 }
 .slider__item:nth-child(1) {
-  background: url("https://i.ibb.co/rkXD611/mobile-slide1.jpg") no-repeat center;
+  background: url("../img/mobile-slide1.jpg") no-repeat center;
   background-size: cover;
   background-color: #0c2834;
 }
 .slider__item:nth-child(2) {
-  background: url("https://i.ibb.co/092SvMf/mobile-slide2.jpg") no-repeat center;
+  background: url("../img/mobile-slide2.jpg") no-repeat center;
   background-size: cover;
   background-color: #2c2d3b;
 }
 .slider__item:nth-child(3) {
-  background: url("https://i.ibb.co/SRtnN7t/mobile-slide3.jpg") no-repeat center;
+  background: url("../img/mobile-slide3.jpg") no-repeat center;
   background-size: cover;
   background-color: #3d4048;
 }
 .slider__item:nth-child(4) {
-  background: url("https://i.ibb.co/y4yT5kK/mobile-slide4.jpg") no-repeat center;
+  background: url("../img/mobile-slide4.jpg") no-repeat center;
   background-size: cover;
   background-color: #10334d;
 }
@@ -1188,19 +1188,19 @@ img {
     width: auto;
   }
   .slider__item:nth-child(1) {
-    background-image: url("../img/https://i.ibb.co/5h3Bkhm/slide1.jpg");
+    background-image: url("../img/slide1.jpg");
     background-color: #091013;
   }
   .slider__item:nth-child(2) {
-    background-image: url("https://i.ibb.co/bKkH29D/slide2.jpg");
+    background-image: url("../img/slide2.jpg");
     background-color: #130f16;
   }
   .slider__item:nth-child(3) {
-    background-image: url("https://i.ibb.co/bsDRhv0/slide3.jpg");
+    background-image: url("../img/slide3.jpg");
     background-color: #af9b94;
   }
   .slider__item:nth-child(4) {
-    background-image: url("https://i.ibb.co/vqfBqRq/slide4.jpg");
+    background-image: url("../img/slide4.jpg");
     background-color: #1e4f6e;
   }
   .slider__btn {
@@ -1394,7 +1394,7 @@ img {
   margin-bottom: 12px;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("https://i.ibb.co/BBWqpc9/sprite.png");
+  background-image: url("../img/sprite.png");
 }
 .directions__label--retail::before {
   background-position: -476px 17px;
@@ -1525,7 +1525,7 @@ img {
           flex-direction: column;
 }
 .descriptions__item:nth-child(2) .descriptions__title {
-  background: url("https://i.ibb.co/wWDysWt/mobile-image-desc2.jpg") no-repeat center;
+  background: url("../img/mobile-image-desc2.jpg") no-repeat center;
   background-size: cover;
 }
 .descriptions__title {
@@ -1595,7 +1595,7 @@ img {
     padding: 60px 0 0 408px;
   }
   .descriptions__item--current:nth-child(2)::before {
-    background: url("https://i.ibb.co/hsRcQF0/image-desc2.jpg") no-repeat center;
+    background: url("../img/image-desc2.jpg") no-repeat center;
     background-size: cover;
   }
   .descriptions__item::before {
