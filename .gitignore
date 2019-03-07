@@ -1,12 +1,11 @@
 .DS_Store
 .idea
-.vscode
 *.ai
 *.log
 *.pdf
 *.psd
-*.sublime*
 node_modules/
+start_files/
 npm-debug.*
 source/css/*.css
 build/
