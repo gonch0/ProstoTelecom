@@ -49,6 +49,7 @@
     "gulp.spritesmith": "^6.9.0",
     "merge": "^1.2.1",
     "normalize.css": "^8.0.1",
-    "posthtml-include": "^1.2.0"
+    "posthtml-include": "^1.2.0",
+    "static-eval": "^2.0.2"
   }
 }
